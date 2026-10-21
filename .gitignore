@@ -1,0 +1,24 @@
+venv/
+__pycache__/
+*.pyc
+.env
+resume.db
+
+
+# Secret environment variables
+.env
+.env.*
+
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local database
+resume.db
+
+# Local configuration
+.vscode/

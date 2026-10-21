@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResumeAI | Smart Resume Screening</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="/" class="logo">
+            <span class="logo-icon">R</span>
+            ResumeAI
+        </a>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#screening">Screening</a>
+            <a href="#results">Results</a>
+        </nav>
+
+        <span class="status-badge">GEN AI RECRUITMENT</span>
+    </header>
+
+    <main class="container" id="dashboard">
+
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">AI-POWERED RECRUITMENT</p>
+                <h1>Smart Resume <span>Screening</span></h1>
+                <p class="subtitle">
+                    Find the right candidate faster with AI-powered resume
+                    analysis and intelligent candidate ranking.
+                </p>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon purple">📄</div>
+                <p>Resumes Selected</p>
+                <h2 id="resumeCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✦</div>
+                <p>AI Analysis</p>
+                <h2>Smart Match</h2>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">↗</div>
+                <p>Ranking</p>
+                <h2>Automated</h2>
+            </div>
+        </section>
+
+        <section class="screening-layout" id="screening">
+
+            <div class="panel job-panel">
+                <div class="panel-heading">
+                    <div>
+                        <span class="step-number">01</span>
+                        <h2>Job Description</h2>
+                    </div>
+                    <span class="heading-icon">✎</span>
+                </div>
+
+                <p class="field-description">
+                    Enter the job requirements to evaluate candidate resumes.
+                </p>
+
+                <label for="jobDescription">Job Requirements</label>
+
+                <textarea
+                    id="jobDescription"
+                    placeholder="Example: We are looking for a Python Developer with knowledge of Python, FastAPI, REST APIs, SQL, problem-solving and software development..."
+                    required
+                ></textarea>
+
+                <div class="field-footer">
+                    <span>Be specific about skills and experience.</span>
+                </div>
+            </div>
+
+            <div class="panel upload-panel">
+                <div class="panel-heading">
+                    <div>
+                        <span class="step-number">02</span>
+                        <h2>Upload Resumes</h2>
+                    </div>
+                    <span class="heading-icon">⇧</span>
+                </div>
+
+                <p class="field-description">
+                    Upload candidate resumes for AI-powered screening.
+                </p>
+
+                <label for="resumeFiles" class="upload-area" id="uploadArea">
+                    <div class="upload-icon">↑</div>
+                    <h3>Choose resume files</h3>
+                    <p>Click here to browse your computer</p>
+                    <span>PDF, DOCX or TXT (depending on backend support)</span>
+                </label>
+
+                <input
+                    type="file"
+                    id="resumeFiles"
+                    accept=".pdf,.docx,.doc,.txt"
+                    multiple
+                    hidden
+                >
+
+                <div id="fileList" class="file-list">
+                    <p class="empty-files">No resumes selected yet.</p>
+                </div>
+
+                <button type="button" id="analyzeBtn" class="analyze-button">
+                    <span>✦</span>
+                    Analyze Resumes
+                    <span>→</span>
+                </button>
+
+                <p class="privacy-note">
+                    Your resumes are processed by the connected application backend.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="panel results-panel" id="results">
+            <div class="panel-heading">
+                <div>
+                    <span class="step-number">03</span>
+                    <h2>Screening Results</h2>
+                </div>
+                <span class="results-label">AI Analysis</span>
+            </div>
+
+            <div id="loading" class="loading-state" hidden>
+                <div class="loader"></div>
+                <h3>Analyzing resumes...</h3>
+                <p>Please wait while the system processes your candidates.</p>
+            </div>
+
+            <div id="messageBox" class="message-box" hidden></div>
+
+            <div id="resultsContainer">
+                <div class="results-placeholder">
+                    <div class="placeholder-icon">▤</div>
+                    <h3>Your results will appear here</h3>
+                    <p>
+                        Enter a job description, upload resumes and click
+                        Analyze Resumes to get started.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>ResumeAI — AI Resume Screening &amp; Ranking System</p>
+            <p>Powered by Generative AI</p>
+        </footer>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
