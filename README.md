@@ -10,7 +10,7 @@ An AI-powered **Resume Screening and Candidate Ranking Tool** built with Python,
 
 ## 🌐 Live Demo
 
-🚀 **Live Website:** [Click Here to Open the Application](https://your-live-app-url.onrender.com)
+🚀 **Live Website:** [Click Here to Open the Application](https://ai-smart-resume-screening-cqcb.onrender.com)
 
 > Replace the placeholder URL with your actual deployed website URL after deployment.
 
