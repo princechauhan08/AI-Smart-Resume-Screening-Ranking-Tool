@@ -114,7 +114,7 @@ git clone https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-NAME.git
 ```
 
 ```bash
-cd YOUR-REPOSITORY-NAME
+cd AI-Smart-Resume-Screening & Ranking-Tool
 ```
 
 ### 2. Create a Virtual Environment

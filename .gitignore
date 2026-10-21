@@ -22,3 +22,7 @@ resume.db
 
 # Local configuration
 .vscode/
+
+resume.db
+*.sqlite
+*.sqlite3
